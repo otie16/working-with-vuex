@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-      <product-list-one v-bind:products="products"></product-list-one>
-      <product-list-two v-bind:products="products"></product-list-two>
+     <Component1 />
   </div>
 </template>
 
 <script>
-import ProductListOne from './components/ProductListOne.vue';
-import ProductListTwo from './components/ProductListTwo.vue';
+import Component1 from './components/Component1.vue'
+
 export default {
     name: 'app',
     components: {
-        'product-list-one': ProductListOne,
-        'product-list-two': ProductListTwo
+       Component1
     },
     data () {
         return {
-            products: [
-                {name: 'Banana Skin', price: 20},
-                {name: 'Shiny Star', price: 40},
-                {name: 'Green Shells', price: 60},
-                {name: 'Red Shells', price: 80}
-            ]
+           
         }
     }
 }
@@ -31,6 +24,6 @@ export default {
 body{
     font-family: Ubuntu;
     color: #555;
+    text-align: center;
 }
 </style>
-© 2021 GitHub, Inc.
